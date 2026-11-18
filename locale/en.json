@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Model usage",
+    "description": "Shows the coding-plan quota, wallet balance or OpenCode Go allowance for whichever model provider the session is using, reusing the API key already configured for that provider"
+  }
+}

@@ -1,0 +1,17 @@
+# One row: the Host half answers the quota, balance and OpenCode-usage routes,
+# the Client half renders the pill for whichever provider the session is using.
+# Optional `config:` keys, merged over the Host defaults in index.js:
+#   apiKeyEnv  credential reference resolved through ctx.credentials
+#   endpoint   MiniMax quota endpoint
+#   deepseekApiKeyEnv / deepseekEndpoint  the DeepSeek wallet query
+#   opencodeApiKeyEnv / opencodeEndpoint  the OpenCode Go usage query
+#   timeoutMs  per-request timeout
+#   cacheMs    how long one successful answer is reused (default 60s, i.e. two
+#              of the pill's 30s polls)
+#   warmOnStart  read every configured provider once after boot (default true),
+#              so the first conversation's pill starts from a cache hit
+#   models     model_name filter; defaults to [general] (video is not shown),
+#              and `models: []` shows every bucket MiniMax returns
+- insert:
+    - id: model-usage
+      name: '@local/dsh-model-usage'

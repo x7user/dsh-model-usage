@@ -1,0 +1,36 @@
+{
+  "name": "@local/dsh-model-usage",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Shows MiniMax coding-plan quota, the DeepSeek wallet balance or the OpenCode Go plan allowance next to the conversation composer",
+  "icon": "./icon.svg",
+  "scripts": {
+    "test": "node --test verify/host.test.mjs verify/client.test.mjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json"
+  ],
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
