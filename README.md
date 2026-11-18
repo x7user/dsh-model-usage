@@ -257,3 +257,7 @@ import 过的 ES 模块——切换插件开关、重新执行 `install_bundle` 
 import，因为 dsh 的 HMR 监听忽略 `**/node_modules`，且只监听 dsh 安装目录。
 
 所以**任何对 `index.js` 的改动都需要重启 `dsh web`** 才能生效。
+
+## 许可证
+
+MIT，全文见 [LICENSE](LICENSE)。Copyright (c) 2026 x7user。
