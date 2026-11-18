@@ -11,7 +11,7 @@
 
 ## 安装
 
-**从 GitHub 装**（换机器、给别人用）：
+**从 GitHub 装**：
 
 ```
 plugin_manager install_bundle  target: github:x7user/dsh-model-usage
