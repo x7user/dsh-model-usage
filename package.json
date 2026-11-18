@@ -5,6 +5,14 @@
   "type": "module",
   "description": "Shows MiniMax coding-plan quota, the DeepSeek wallet balance or the OpenCode Go plan allowance next to the conversation composer",
   "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x7user/dsh-model-usage.git"
+  },
+  "homepage": "https://github.com/x7user/dsh-model-usage#readme",
+  "bugs": {
+    "url": "https://github.com/x7user/dsh-model-usage/issues"
+  },
   "scripts": {
     "test": "node --test verify/host.test.mjs verify/client.test.mjs"
   },

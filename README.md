@@ -228,11 +228,26 @@ npm test        # 等价于 node --test verify/host.test.mjs verify/client.test.
 
 ## 安装
 
+**从 GitHub 装**（换机器、给别人用）：
+
+```
+plugin_manager install_bundle  target: github:x7user/dsh-model-usage
+```
+
+`github:` 是 pnpm 认的简写，等价于 `https://github.com/x7user/dsh-model-usage`；
+要钉住某个提交或标签就写 `github:x7user/dsh-model-usage#<sha 或 tag>`。
+这条路是把仓库克隆进 profile 的 `node_modules`，之后上游更新**不会**自动跟过来：
+重新装要走 `remove_bundle` 再 `install_bundle`。
+
+**从本地目录装**（本机开发时用）：
+
 ```
 plugin_manager install_bundle  target: E:\workspace\app\model-usage
 ```
 
-然后重启 `dsh web`，重新加载 <http://127.0.0.1:3080>。
+profile 对这个目录是**链接**而不是拷贝，所以改文件即刻反映到页面。
+
+装完重启 `dsh web`，重新加载 <http://127.0.0.1:3080>。
 
 ## 安装之后的修改
 
