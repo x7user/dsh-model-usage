@@ -13,5 +13,5 @@
 #   models     model_name filter; defaults to [general] (video is not shown),
 #              and `models: []` shows every bucket MiniMax returns
 - insert:
-    - id: model-usage
-      name: '@local/dsh-model-usage'
+    - id: model-quota
+      name: 'dsh-model-quota'

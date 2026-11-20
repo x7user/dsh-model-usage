@@ -1,5 +1,5 @@
 /**
- * Host half of the model-usage bundle: MiniMax coding-plan quota, the DeepSeek
+ * Host half of the model-quota bundle: MiniMax coding-plan quota, the DeepSeek
  * wallet balance and the OpenCode Go plan allowance.
  *
  * No provider API key ever leaves this file: each is read per request through
@@ -399,7 +399,7 @@ export function apply(ctx, config) {
           path: QUOTA_ENDPOINT,
           handler: makeHandler(scope, readQuota),
         }),
-      `model-usage: GET ${QUOTA_ENDPOINT}`,
+      `model-quota: GET ${QUOTA_ENDPOINT}`,
     );
     scope.effect(
       () =>
@@ -408,7 +408,7 @@ export function apply(ctx, config) {
           path: BALANCE_ENDPOINT,
           handler: makeHandler(scope, readBalance),
         }),
-      `model-usage: GET ${BALANCE_ENDPOINT}`,
+      `model-quota: GET ${BALANCE_ENDPOINT}`,
     );
     scope.effect(
       () =>
@@ -417,7 +417,7 @@ export function apply(ctx, config) {
           path: OPENCODE_ENDPOINT,
           handler: makeHandler(scope, readOpencode),
         }),
-      `model-usage: GET ${OPENCODE_ENDPOINT}`,
+      `model-quota: GET ${OPENCODE_ENDPOINT}`,
     );
 
     // Boot-time warm-up. The first conversation's pill mounts a few seconds
@@ -445,7 +445,7 @@ export function apply(ctx, config) {
           live = false;
           clearTimeout(timer);
         };
-      }, 'model-usage: warm the quota readers');
+      }, 'model-quota: warm the quota readers');
     }
   });
 }

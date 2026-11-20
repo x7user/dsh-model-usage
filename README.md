@@ -1,4 +1,4 @@
-# @local/dsh-model-usage
+# dsh-model-quota
 
 在 Harness Web 界面的输入框下方显示当前账号的模型用量，按会话选中的 provider 自动切换。
 
@@ -18,6 +18,8 @@ plugin_manager install_bundle  target: github:x7user/dsh-model-usage
 ```
 
 `github:` 是 pnpm 认的简写。要钉住版本就加 `#`，例如 `#v1.2.0` 或某个 commit sha。
+
+> 仓库名（GitHub）是 `x7user/dsh-model-usage`，包名（npm）是 `dsh-model-quota`。两者不同名是故意的：npm 上的 `dsh-model-usage` 是另一个作者的包，装它会拿到别人的代码。
 
 **从本地目录装**（本机开发时用）：
 
@@ -66,8 +68,8 @@ profile 对这个目录是**链接**而不是拷贝，改 `client.js` 刷新页�
 所有项都有默认值。要改就在 profile 的 `cordis.patch.yml` 里给这一行加 `config:` 块：
 
 ```yaml
-- id: model-usage
-  name: '@local/dsh-model-usage'
+- id: model-quota
+  name: 'dsh-model-quota'
   config:
     apiKeyEnv: MINIMAX_CN_API_KEY
     models: [general]

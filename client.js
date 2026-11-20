@@ -1,11 +1,11 @@
 /**
- * Browser half of the model-usage bundle: one ambient pill below the composer
+ * Browser half of the model-quota bundle: one ambient pill below the composer
  * that expands into the window details. Data arrives from the Host half's
  * same-origin routes, so the page never sees an API key.
  */
 
 window.__ModuleLoader__.load({
-  id: '@local/dsh-model-usage',
+  id: 'dsh-model-quota',
   factory(require) {
     const React = require('react')
     const ReactDOM = require('react-dom')
@@ -976,12 +976,12 @@ window.__ModuleLoader__.load({
     return {
       inject: ['slots', 'locale'],
       apply(ctx) {
-        ctx.effect(() => ctx.locale.register(NS, DICTIONARIES), 'model-usage: dictionaries')
+        ctx.effect(() => ctx.locale.register(NS, DICTIONARIES), 'model-quota: dictionaries')
         ctx.slots.inject('conversation.composer.dock', () =>
           ctx.slots.register(
             {
               name: 'conversation.composer.dock',
-              id: 'model-usage',
+              id: 'model-quota',
               order: 10,
               locale: NS,
               label: () => ctx.locale.bind(NS)('pill.title'),

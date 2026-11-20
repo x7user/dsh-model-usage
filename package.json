@@ -1,9 +1,22 @@
 {
-  "name": "@local/dsh-model-usage",
+  "name": "dsh-model-quota",
   "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "Shows MiniMax coding-plan quota, the DeepSeek wallet balance or the OpenCode Go plan allowance next to the conversation composer",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "model-quota",
+    "quota",
+    "usage",
+    "balance",
+    "minimax",
+    "deepseek",
+    "opencode"
+  ],
   "icon": "./icon.svg",
   "license": "MIT",
   "repository": {
