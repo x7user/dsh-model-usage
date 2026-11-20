@@ -21,11 +21,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/x7user/dsh-model-usage.git"
+    "url": "git+https://github.com/x7user/dsh-model-quota.git"
   },
-  "homepage": "https://github.com/x7user/dsh-model-usage#readme",
+  "homepage": "https://github.com/x7user/dsh-model-quota#readme",
   "bugs": {
-    "url": "https://github.com/x7user/dsh-model-usage/issues"
+    "url": "https://github.com/x7user/dsh-model-quota/issues"
   },
   "scripts": {
     "test": "node --test verify/host.test.mjs verify/client.test.mjs"

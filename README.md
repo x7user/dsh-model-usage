@@ -14,17 +14,17 @@
 **从 GitHub 装**：
 
 ```
-plugin_manager install_bundle  target: github:x7user/dsh-model-usage
+plugin_manager install_bundle  target: github:x7user/dsh-model-quota
 ```
 
 `github:` 是 pnpm 认的简写。要钉住版本就加 `#`，例如 `#v1.2.0` 或某个 commit sha。
 
-> 仓库名（GitHub）是 `x7user/dsh-model-usage`，包名（npm）是 `dsh-model-quota`。两者不同名是故意的：npm 上的 `dsh-model-usage` 是另一个作者的包，装它会拿到别人的代码。
+> GitHub 仓库名和包名一致，都是 `dsh-model-quota`。这个仓库以前叫 `dsh-model-usage`，GitHub 会把旧地址重定向过来，但建议直接用新名。`github:` 安装读的是仓库里的 `package.json`，所以名字对得上。
 
 **从本地目录装**（本机开发时用）：
 
 ```
-plugin_manager install_bundle  target: E:\workspace\app\model-usage
+plugin_manager install_bundle  target: E:\workspace\app\dsh-model-quota
 ```
 
 profile 对这个目录是**链接**而不是拷贝，改 `client.js` 刷新页面即可看到。
